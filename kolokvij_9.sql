@@ -102,6 +102,8 @@ values(33.33,'Adidas'),(45.43,'Nike'),(65.98,'Reebok');
 #U tablici snasa postavite svim zapisima kolonu drugiputa na vrijednost 24. travnja 2020.
 update snasa set drugiputa = '2020-04-24';
 
+#U tablici zarucnik obrišite sve zapise čija je vrijednost kolone haljina jednako AB.
+delete from zarucnik where haljina = 'AB';
 
 
 
