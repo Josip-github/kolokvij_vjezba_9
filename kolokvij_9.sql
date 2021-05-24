@@ -105,6 +105,8 @@ update snasa set drugiputa = '2020-04-24';
 #U tablici zarucnik obrišite sve zapise čija je vrijednost kolone haljina jednako AB.
 delete from zarucnik where haljina = 'AB';
 
+#Izlistajte carape iz tablice cura uz uvjet da vrijednost kolone ekstroventno nepoznate.
+select carape from cura where ekstrovertno is null;
 
 
 
