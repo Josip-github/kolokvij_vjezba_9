@@ -82,3 +82,39 @@ alter table cura add foreign key (punac) references punac(sifra);
 alter table punac_prijateljica add foreign key (punac) references punac(sifra);
 alter table punac_prijateljica add foreign key (prijateljica) references prijateljica(sifra);
 
+#U tablice brat, cura i punac_prijateljica unesite po 3 retka.
+
+insert into punac(narukvica)
+values(10),(15),(21);
+
+insert into prijateljica(kuna)
+values(22.22),(55.55),(88.77);
+
+insert into punac_prijateljica(punac,prijateljica)
+values(1,1),(2,2),(3,3);
+
+insert into cura(vesta,suknja,punac)
+values('Adidas','proljetna',1),('Nike','kratka',2),('Sportska','duga',3);
+
+insert into brat(novcica,vesta)
+values(33.33,'Adidas'),(45.43,'Nike'),(65.98,'Reebok');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
