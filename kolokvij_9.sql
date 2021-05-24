@@ -71,3 +71,14 @@ create table snasa(
 	ostavljena int
 );
 
+alter table snasa add foreign key (ostavljena) references ostavljena(sifra);
+
+alter table zarucnik add foreign key (brat) references brat(sifra);
+
+alter table brat add foreign key (cura) references cura(sifra);
+
+alter table cura add foreign key (punac) references punac(sifra);
+
+alter table punac_prijateljica add foreign key (punac) references punac(sifra);
+alter table punac_prijateljica add foreign key (prijateljica) references prijateljica(sifra);
+
