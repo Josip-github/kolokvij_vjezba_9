@@ -126,7 +126,7 @@ order by b.ekstrovertno desc;
 
 #Prikažite kolone modelnaocala i kuna iz tablice punac čiji se primarni ključ ne nalaze u tablici punac_prijateljica.
 select p.modelnaocala , p.kuna 
-from punac p inner join punac_prijateljica pp on pp.punac = p.sifra 
+from punac p left join punac_prijateljica pp on pp.punac = p.sifra 
 where pp.punac is null;
 
 
