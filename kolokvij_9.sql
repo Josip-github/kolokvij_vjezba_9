@@ -108,6 +108,22 @@ delete from zarucnik where haljina = 'AB';
 #Izlistajte carape iz tablice cura uz uvjet da vrijednost kolone ekstroventno nepoznate.
 select carape from cura where ekstrovertno is null;
 
+/*Prikažite kuna iz tablice prijateljica, nausnica iz tablice zarucnik te
+ekstroventno iz tablice brat uz uvjet da su vrijednosti kolone
+ekstroventno iz tablice cura poznate te da su vrijednosti kolone
+modelnaocala iz tablice punac sadrže niz znakova ba. Podatke
+posložite po ekstroventno iz tablice brat silazno.*/
+
+#prijateljica,zarucnik, brat, cura, punac
+select p.kuna , z.nausnica , b.ekstrovertno 
+from prijateljica p inner join punac_prijateljica pp on p.sifra = pp.prijateljica 
+inner join punac p2 on p2.sifra = pp.punac 
+inner join cura c on c.punac = p2.sifra 
+inner join brat b on b.cura = c.sifra 
+inner join zarucnik z on z.brat = b.sifra 
+where c.ekstrovertno is not null and p2.modelnaocala like '%ba%'
+order by b.ekstrovertno desc;
+
 
 
 
