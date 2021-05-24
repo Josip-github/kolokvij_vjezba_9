@@ -124,7 +124,10 @@ inner join zarucnik z on z.brat = b.sifra
 where c.ekstrovertno is not null and p2.modelnaocala like '%ba%'
 order by b.ekstrovertno desc;
 
-
+#Prikažite kolone modelnaocala i kuna iz tablice punac čiji se primarni ključ ne nalaze u tablici punac_prijateljica.
+select p.modelnaocala , p.kuna 
+from punac p inner join punac_prijateljica pp on pp.punac = p.sifra 
+where pp.punac is null;
 
 
 
