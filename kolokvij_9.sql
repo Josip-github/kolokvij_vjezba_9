@@ -99,6 +99,8 @@ values('Adidas','proljetna',1),('Nike','kratka',2),('Sportska','duga',3);
 insert into brat(novcica,vesta)
 values(33.33,'Adidas'),(45.43,'Nike'),(65.98,'Reebok');
 
+#U tablici snasa postavite svim zapisima kolonu drugiputa na vrijednost 24. travnja 2020.
+update snasa set drugiputa = '2020-04-24';
 
 
 
